@@ -26,7 +26,7 @@ Este projeto implementa a geração de números de CPF e CNPJ válidos, com a l�
 ## 📋 Como Executar
 1- Clone este repositório:
 ```bash
-git clone https://github.com/seu-usuario/gerador-cpf-cnpj.git
+git clone https://github.com/enzokaua/single-registration-generate.git
 ```
 
 2- Navegue até a pasta do projeto:
