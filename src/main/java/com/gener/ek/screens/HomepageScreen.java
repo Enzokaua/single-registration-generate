@@ -2,9 +2,9 @@ package com.gener.ek.screens;
 
 import javax.swing.*;
 
-public class Index extends JFrame {
+public class HomepageScreen extends JFrame {
 
-	public Index() {
+	public HomepageScreen() {
 		setTitle("Individual registration validator and generator (CPF)");
 		setSize(600, 200);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,8 +19,8 @@ public class Index extends JFrame {
 		createdButton.setBounds(33, 75, 250, 50);
 		validatedButton.setBounds(316, 75, 250, 50);
 
-		createdButton.addActionListener(e -> new CreatedScreen());
-		validatedButton.addActionListener(e -> new ValidateScreen());
+		createdButton.addActionListener(e -> {new CreatedCpfOrCnpj(); dispose();});
+		validatedButton.addActionListener(e -> {new ValidateCpfOrCnpj(); dispose();});
 
 		index.add(title);
 		index.add(createdButton);

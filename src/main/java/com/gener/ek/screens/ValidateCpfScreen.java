@@ -5,9 +5,9 @@ import com.gener.ek.utils.Utils;
 import javax.swing.*;
 import java.awt.*;
 
-public class ValidateScreen extends JFrame {
+public class ValidateCpfScreen extends JFrame {
 
-    public ValidateScreen() {
+    public ValidateCpfScreen() {
         setTitle("Validate CPF");
         setSize(600, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -27,14 +27,14 @@ public class ValidateScreen extends JFrame {
         resultLabel.setFont(new Font("Arial", Font.BOLD, 14));
         resultLabel.setBounds(425, 20, 200, 15);
 
-        backToIndexButton.addActionListener(e -> new Index());
+        backToIndexButton.addActionListener(e -> {{new HomepageScreen(); dispose();}; dispose();});
         validatedButton.addActionListener(e -> {
             if (Boolean.TRUE.equals(Utils.isValidateCpf(textArea.getText()))) {
-                resultLabel.setText("VÁLIDO");
+                resultLabel.setText("VALID");
                 resultLabel.setForeground(Color.GREEN);
 
             } else {
-                resultLabel.setText("INVÁLIDO");
+                resultLabel.setText("INVALID");
                 resultLabel.setForeground(Color.RED);
 
             }

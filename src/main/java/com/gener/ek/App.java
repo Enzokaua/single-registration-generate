@@ -1,12 +1,12 @@
 package com.gener.ek;
 
-import com.gener.ek.screens.Index;
+import com.gener.ek.screens.HomepageScreen;
 
 import javax.swing.*;
 
 public class App extends JFrame {
     public static void main(String[] args) {
-		SwingUtilities.invokeLater(Index::new);
+		SwingUtilities.invokeLater(HomepageScreen::new);
 	}
 }
 

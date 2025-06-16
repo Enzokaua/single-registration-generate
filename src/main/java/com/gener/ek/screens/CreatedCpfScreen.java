@@ -5,9 +5,9 @@ import com.gener.ek.utils.Utils;
 import javax.swing.*;
 import java.awt.*;
 
-public class CreatedScreen extends JFrame {
+public class CreatedCpfScreen extends JFrame {
 
-	public CreatedScreen() {
+	public CreatedCpfScreen() {
 		setTitle("CPF Generator");
 		setSize(600, 200);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,7 +30,7 @@ public class CreatedScreen extends JFrame {
 			title.setText("CPF valid: " + Utils.makeCpf(formatCpf));
 		});
 
-		backToIndexButton.addActionListener(e -> new Index());
+		backToIndexButton.addActionListener(e -> {new HomepageScreen(); dispose();});
 		createdScreen.add(formatCheckBox);
 		createdScreen.add(title);
 		createdScreen.add(backToIndexButton);
