@@ -88,8 +88,8 @@ public class Utils {
         while (cnpj.length() < 12) {
             cnpj.append(range.charAt(random.nextInt(range.length())));
         }
-        cnpj.append((char) ('0' + fistDigitAlphaCnpj(cnpj.toString())));
-        cnpj.append((char) ('0' + secondDigitAphaCnpj(cnpj.toString() + cnpj.charAt(12))));
+        cnpj.append(fistDigitAlphaCnpj(cnpj.toString()));
+        cnpj.append(secondDigitAphaCnpj(cnpj.toString()));
 
         if (format) {
             return cnpj.substring(0, 2) + "." +
@@ -110,6 +110,7 @@ public class Utils {
         int sum = 0;
 
         for (int i = 0; i < 12; i++) {
+
             sum += hashCharacters(cnpj.charAt(i)) * weigthFirsDigit[i];
         }
 
@@ -130,9 +131,9 @@ public class Utils {
 
     private static int hashCharacters(char ch) {
         if (Character.isDigit(ch)) {
-            return ch - '0';
+            return Character.getNumericValue(ch);
         } else if (Character.isLetter(ch)) {
-            return 10 + (ch - 'A');
+            return ch - 48;
         } else {
             throw new IllegalArgumentException("Invalid character: " + ch);
         }

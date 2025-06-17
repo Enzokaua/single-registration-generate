@@ -20,9 +20,9 @@ public class ValidateCnpjScreen extends JFrame {
         JButton backToIndexButton = new JButton("Back");
         JButton validatedNumericButton = new JButton("Validate Num");
         JButton validadeAlphaButton = new JButton("Validate Alph");
-        validatedNumericButton.setBounds(33, 75, 250, 50);
-        validadeAlphaButton.setBounds(210, 70, 160, 40);
-        backToIndexButton.setBounds(316, 75, 250, 50);
+        validatedNumericButton.setBounds(30, 80, 140, 40);
+        validadeAlphaButton.setBounds(230, 80, 140, 40);
+        backToIndexButton.setBounds(430, 80, 140, 40);
         JTextArea textArea = new JTextArea();
         textArea.setBounds(250, 20, 150, 15);
         JLabel resultLabel = new JLabel();
